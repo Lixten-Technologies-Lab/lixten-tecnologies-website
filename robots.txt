@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin
+Disallow: /admin.html
+Disallow: /test-supabase
+Disallow: /test-supabase.html
+
+Sitemap: http://www.lixten.in/sitemap.xml

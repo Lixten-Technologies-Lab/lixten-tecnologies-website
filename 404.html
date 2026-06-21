@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('lixten-theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      const showBrochure = localStorage.getItem('lixten-show-brochure');
+      if (showBrochure === 'false') {
+        document.documentElement.setAttribute('data-hide-brochure', 'true');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; connect-src 'self' https://vaqpeytmmhdphjjokpix.supabase.co wss://vaqpeytmmhdphjjokpix.supabase.co; img-src 'self' data:;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Oops! The page you are looking for does not exist. Return to Lixten Technologies home or explore our software services.">
+  <meta name="robots" content="noindex, follow">
+  <title>Page Not Found - Lixten Technologies</title>
+  
+  <!-- Resource Hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Deferred Scripts -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js" defer></script>
+  
+  <style>
+    .error-wrapper {
+      min-height: calc(100vh - 80px - 300px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 2rem;
+      position: relative;
+    }
+    
+    .error-card {
+      max-width: 580px;
+      width: 100%;
+      text-align: center;
+      padding: 4rem 3rem;
+      background: var(--bg-glass);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius);
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .error-404 {
+      font-size: 7.5rem;
+      font-weight: 800;
+      font-family: 'Outfit', sans-serif;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -2px;
+      animation: float 6s ease-in-out infinite;
+      display: inline-block;
+    }
+    
+    .error-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    
+    .error-desc {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+    
+    .error-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .countdown-text {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="assets/images/light_logo.png" class="logo-img logo-light-theme" alt="Lixten Logo">
+        <img src="assets/images/dark_logo.png" class="logo-img logo-dark-theme" alt="Lixten Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <a href="/contact" class="btn btn-primary">Get Started</a>
+      <button id="themeToggle" class="btn btn-secondary" style="padding: 8px 12px; margin-left: 0.5rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+        <i class="bi bi-moon"></i>
+      </button>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Error Content -->
+  <div class="error-wrapper ambient-bg">
+    <div class="error-card">
+      <div class="error-404">404</div>
+      <h1 class="error-title">Lost in Space?</h1>
+      <p class="error-desc">
+        The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. Let's get you back on track.
+      </p>
+      <div class="error-actions">
+        <a href="/" class="btn btn-primary"><i class="bi bi-house-door" style="margin-right: 0.5rem;"></i> Go to Homepage</a>
+        <a href="/contact" class="btn btn-secondary"><i class="bi bi-envelope" style="margin-right: 0.5rem;"></i> Contact Us</a>
+      </div>
+      <p class="countdown-text" id="countdown">Redirecting to homepage in <span id="seconds">15</span> seconds...</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">
+            <img src="assets/images/light_logo.png" class="logo-img logo-light-theme" alt="Lixten Logo">
+            <img src="assets/images/dark_logo.png" class="logo-img logo-dark-theme" alt="Lixten Logo">
+          </a>
+          <p>Innovating Today, Empowering Tomorrow. Your trusted partner for digital transformation.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="/services#web">Web Development</a></li>
+            <li><a href="/services#software">Software Dev</a></li>
+            <li><a href="/services#security">Cyber Security</a></li>
+            <li><a href="/services#cloud">Cloud Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/about#vision">Vision</a></li>
+            <li><a href="/about#mission">Mission</a></li>
+            <li><a href="/about#values">Values</a></li>
+            <li><a href="assets/brochure.pdf" download><i class="bi bi-file-earmark-pdf" style="margin-right: 0.35rem;"></i> Brochure</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><i class="bi bi-geo-alt"></i> Chennai, Tamil Nadu, India</li>
+            <li><i class="bi bi-envelope"></i> <a href="mailto:lixtentechnologies@gmail.com">lixtentechnologies@gmail.com</a></li>
+            <li><i class="bi bi-globe"></i> <a href="http://www.lixten.in">www.lixten.in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lixten Technologies. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Automatic redirection logic
+    let secondsLeft = 15;
+    const secondsEl = document.getElementById('seconds');
+    const interval = setInterval(() => {
+      secondsLeft--;
+      if (secondsEl) secondsEl.textContent = secondsLeft;
+      if (secondsLeft <= 0) {
+        clearInterval(interval);
+        window.location.href = './';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <title>Supabase Test</title>
+</head>
+<body>
+  <pre id="out">Loading...</pre>
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/module/min.js';
+    const client = createClient('https://vaqpeytmmhdphjjokpix.supabase.co','eyJhbG...AFKs');
+    const out = document.getElementById('out');
+    const { error } = await client.from('contacts').select('*', { head: true, count: 'exact' });
+    if (error) {
+      out.textContent = 'ERROR: ' + error.message + '\\nCODE: ' + error.code;
+    } else {
+      out.textContent = 'OK — table reachable/query succeeded.';
+    }
+  </script>
+</body>
+</html>

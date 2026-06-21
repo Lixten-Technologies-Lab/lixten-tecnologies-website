@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('lixten-theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      const showBrochure = localStorage.getItem('lixten-show-brochure');
+      if (showBrochure === 'false') {
+        document.documentElement.setAttribute('data-hide-brochure', 'true');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; connect-src 'self' https://vaqpeytmmhdphjjokpix.supabase.co wss://vaqpeytmmhdphjjokpix.supabase.co; img-src 'self' data:;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the mission, vision, and core values of Lixten Technologies. Meet our leadership team dedicated to accelerating digital transformation.">
+  <title>About Us - Lixten Technologies</title>
+  <link rel="canonical" href="http://www.lixten.in/about">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.lixten.in/about">
+  <meta property="og:title" content="About Us - Lixten Technologies">
+  <meta property="og:description" content="Discover the mission, vision, and core values of Lixten Technologies. Meet our leadership team dedicated to accelerating digital transformation.">
+  <meta property="og:image" content="http://www.lixten.in/assets/images/og-image.jpg">
+  <meta property="og:site_name" content="Lixten Technologies">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="http://www.lixten.in/about">
+  <meta name="twitter:title" content="About Us - Lixten Technologies">
+  <meta name="twitter:description" content="Discover the mission, vision, and core values of Lixten Technologies. Meet our leadership team dedicated to accelerating digital transformation.">
+  <meta name="twitter:image" content="http://www.lixten.in/assets/images/og-image.jpg">
+  
+  <!-- Resource Hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Deferred Scripts -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="assets/images/light_logo.png" class="logo-img logo-light-theme" alt="Lixten Logo">
+        <img src="assets/images/dark_logo.png" class="logo-img logo-dark-theme" alt="Lixten Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about" class="active">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <a href="/contact" class="btn btn-primary">Get Started</a>
+      <button id="themeToggle" class="btn btn-secondary" style="padding: 8px 12px; margin-left: 0.5rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+        <i class="bi bi-moon"></i>
+      </button>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="section ambient-bg" style="padding-top: 140px;">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Who We Are</span>
+        <h1>About <span class="text-gradient">Lixten Technologies</span></h1>
+        <p>We're a passionate team of technologists committed to delivering innovative, secure, and reliable digital solutions that create real-world impact.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="grid-2" style="align-items: center;">
+        <div class="fade-in">
+          <span class="section-label">Our Story</span>
+          <h2 style="margin-bottom: 1.5rem;">Founded with a <span class="text-gradient">Passion for Innovation</span></h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 1.05rem;">
+            Lixten Technologies was founded with a clear mission: to help businesses, students, startups, and organizations leverage technology to achieve growth and success in the digital world.
+          </p>
+          <p style="color: var(--text-secondary); font-size: 1.05rem;">
+            From our roots in Chennai, Tamil Nadu, we've grown into a trusted technology partner, delivering high-quality software development, web solutions, cybersecurity services, and technology consulting at affordable prices.
+          </p>
+        </div>
+        <div class="card fade-in">
+          <div style="text-align: center; padding: 2rem;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;"><i class="bi bi-building"></i></div>
+            <h3 style="margin-bottom: 1rem;">Since Day One</h3>
+            <p style="color: var(--text-secondary);">Building lasting relationships through quality, integrity, and innovation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision -->
+  <section class="section" id="vision" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="grid-2" style="align-items: center; gap: 4rem;">
+        <div class="card fade-in" style="background: linear-gradient(135deg, rgba(65, 27, 255, 0.1), rgba(92, 58, 255, 0.08)); padding: 3rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;"><i class="bi bi-binoculars"></i></div>
+          <h2 style="margin-bottom: 1rem;">Our <span class="text-gradient">Vision</span></h2>
+          <p style="font-size: 1.2rem; color: var(--text-primary); line-height: 1.7;">
+            To become a trusted global technology company that empowers individuals and businesses through innovation, security, and digital transformation.
+          </p>
+        </div>
+        <div class="fade-in">
+          <span class="section-label">Vision</span>
+          <p style="color: var(--text-secondary); font-size: 1.05rem; margin-top: 1rem;">
+            We envision a world where every business, regardless of size, has access to world-class technology solutions. Our vision guides every decision we make and every solution we build.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="section" id="mission">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Mission</span>
+        <h2>What <span class="text-gradient">Drives</span> Us</h2>
+      </div>
+      <div class="grid-2">
+        <div class="service-card fade-in">
+          <div class="service-icon"><i class="bi bi-check-circle"></i></div>
+          <h3>Quality First</h3>
+          <p>Deliver high-quality technology solutions that exceed expectations and stand the test of time.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon"><i class="bi bi-lightbulb"></i></div>
+          <h3>Innovation</h3>
+          <p>Promote innovation through modern software development, exploring new technologies and creative solutions.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon"><i class="bi bi-shield-check"></i></div>
+          <h3>Security & Reliability</h3>
+          <p>Ensure security, reliability, and customer satisfaction in every project we deliver.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon"><i class="bi bi-handshake"></i></div>
+          <h3>Supporting Growth</h3>
+          <p>Support startups and small businesses with affordable digital services that scale with them.</p>
+        </div>
+        <div class="service-card fade-in" style="grid-column: 1 / -1;">
+          <div class="service-icon"><i class="bi bi-globe2"></i></div>
+          <h3>Real-World Impact</h3>
+          <p>Build technology that creates real-world impact, helping clients achieve their goals and transform their operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section" id="values" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Core Values</span>
+        <h2>The Principles That <span class="text-gradient">Guide Us</span></h2>
+      </div>
+      <div class="grid-3">
+        <div class="card fade-in" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;"><i class="bi bi-lightbulb"></i></div>
+          <h3>Innovation</h3>
+          <p style="color: var(--text-secondary);">Continuously exploring new technologies and creative solutions to stay ahead.</p>
+        </div>
+        <div class="card fade-in" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;"><i class="bi bi-handshake"></i></div>
+          <h3>Integrity</h3>
+          <p style="color: var(--text-secondary);">Maintaining honesty, transparency, and professionalism in all interactions.</p>
+        </div>
+        <div class="card fade-in" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;"><i class="bi bi-star"></i></div>
+          <h3>Quality</h3>
+          <p style="color: var(--text-secondary);">Delivering products and services that meet the highest standards.</p>
+        </div>
+        <div class="card fade-in" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;"><i class="bi bi-lock"></i></div>
+          <h3>Security</h3>
+          <p style="color: var(--text-secondary);">Protecting client data and digital assets as if they were our own.</p>
+        </div>
+        <div class="card fade-in" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;"><i class="bi bi-bullseye"></i></div>
+          <h3>Customer Success</h3>
+          <p style="color: var(--text-secondary);">Helping clients achieve their goals through technology-enabled solutions.</p>
+        </div>
+        <div class="card fade-in" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;"><i class="bi bi-arrow-up-circle"></i></div>
+          <h3>Growth</h3>
+          <p style="color: var(--text-secondary);">Fostering continuous learning and improvement for our team and clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder / Team Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Leadership</span>
+        <h2>Meet Our <span class="text-gradient">Founder</span></h2>
+      </div>
+      <div class="card fade-in" style="max-width: 600px; margin: 0 auto; text-align: center;">
+        <div style="width: 120px; height: 120px; border-radius: 50%; background: var(--gradient-1); margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; box-shadow: var(--shadow-glow); overflow: hidden;">
+          <img src="assets/images/CEO.jpeg" alt="Mohamed Farook" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 style="margin-bottom: 0.5rem;">Mohamed Farook</h3>
+        <p style="color: var(--primary-light); margin-bottom: 1rem;">Founder & CEO</p>
+        <p style="color: var(--text-secondary); max-width: 450px; margin: 0 auto;">
+          Passionate about leveraging technology to solve real-world problems and help businesses thrive in the digital age.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">
+            <img src="assets/images/light_logo.png" class="logo-img logo-light-theme" alt="Lixten Logo">
+            <img src="assets/images/dark_logo.png" class="logo-img logo-dark-theme" alt="Lixten Logo">
+          </a>
+          <p>Innovating Today, Empowering Tomorrow. Your trusted partner for digital transformation.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="/services#web">Web Development</a></li>
+            <li><a href="/services#software">Software Dev</a></li>
+            <li><a href="/services#security">Cyber Security</a></li>
+            <li><a href="/services#cloud">Cloud Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/about#vision">Vision</a></li>
+            <li><a href="/about#mission">Mission</a></li>
+            <li><a href="/about#values">Values</a></li>
+            <li><a href="assets/brochure.pdf" download><i class="bi bi-file-earmark-pdf" style="margin-right: 0.35rem;"></i> Brochure</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><i class="bi bi-geo-alt"></i> Chennai, Tamil Nadu, India</li>
+            <li><i class="bi bi-envelope"></i> <a href="mailto:lixtentechnologies@gmail.com">lixtentechnologies@gmail.com</a></li>
+            <li><i class="bi bi-globe"></i> <a href="http://www.lixten.in">www.lixten.in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lixten Technologies. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

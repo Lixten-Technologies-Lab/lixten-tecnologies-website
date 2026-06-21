@@ -1,0 +1,13 @@
+{
+  "name": "lixten-website",
+  "version": "1.0.0",
+  "description": "Lixten Technologies Website",
+  "main": "dev-server.js",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "build": "node setup-env.js"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

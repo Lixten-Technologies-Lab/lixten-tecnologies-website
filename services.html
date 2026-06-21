@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('lixten-theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      const showBrochure = localStorage.getItem('lixten-show-brochure');
+      if (showBrochure === 'false') {
+        document.documentElement.setAttribute('data-hide-brochure', 'true');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; connect-src 'self' https://vaqpeytmmhdphjjokpix.supabase.co wss://vaqpeytmmhdphjjokpix.supabase.co; img-src 'self' data:;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore our end-to-end technology solutions: web development, custom database systems, penetration testing, AWS cloud migrations, and startup consulting.">
+  <title>Our Services - Lixten Technologies</title>
+  <link rel="canonical" href="http://www.lixten.in/services">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.lixten.in/services">
+  <meta property="og:title" content="Our Services - Lixten Technologies">
+  <meta property="og:description" content="Explore our end-to-end technology solutions: web development, custom database systems, penetration testing, AWS cloud migrations, and startup consulting.">
+  <meta property="og:image" content="http://www.lixten.in/assets/images/og-image.jpg">
+  <meta property="og:site_name" content="Lixten Technologies">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="http://www.lixten.in/services">
+  <meta name="twitter:title" content="Our Services - Lixten Technologies">
+  <meta name="twitter:description" content="Explore our end-to-end technology solutions: web development, custom database systems, penetration testing, AWS cloud migrations, and startup consulting.">
+  <meta name="twitter:image" content="http://www.lixten.in/assets/images/og-image.jpg">
+  
+  <!-- Resource Hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Deferred Scripts -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="assets/images/light_logo.png" class="logo-img logo-light-theme" alt="Lixten Logo">
+        <img src="assets/images/dark_logo.png" class="logo-img logo-dark-theme" alt="Lixten Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services" class="active">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <a href="/contact" class="btn btn-primary">Get Started</a>
+      <button id="themeToggle" class="btn btn-secondary" style="padding: 8px 12px; margin-left: 0.5rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+        <i class="bi bi-moon"></i>
+      </button>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="section ambient-bg" style="padding-top: 140px;">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">What We Offer</span>
+        <h1>Our <span class="text-gradient">Services</span></h1>
+        <p>End-to-end technology solutions designed to accelerate your digital transformation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <!-- Web Development -->
+      <div id="web" class="grid-2" style="margin-bottom: 4rem; align-items: center;">
+        <div class="fade-in">
+          <span class="section-label"><i class="bi bi-globe"></i> Web Development</span>
+          <h2 style="margin-bottom: 1.5rem;">Modern Web <span class="text-gradient">Solutions</span></h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.05rem;">
+            From stunning business websites to complex e-commerce platforms and custom web applications, we build web solutions that drive results.
+          </p>
+          <div class="grid-2">
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-building"></i></div>
+              <h4>Business Websites</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Professional websites that convert visitors into customers.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-cart"></i></div>
+              <h4>E-Commerce</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Full-featured online stores with secure payment gateways.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-briefcase"></i></div>
+              <h4>Portfolio Sites</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Showcase your work with beautiful, interactive portfolios.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-gear"></i></div>
+              <h4>Custom Web Apps</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Tailored applications for unique business requirements.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card fade-in" style="background: linear-gradient(135deg, rgba(65, 27, 255, 0.08), rgba(65, 27, 255, 0.04)); display: flex; align-items: center; justify-content: center; min-height: 300px;">
+          <div style="text-align: center;">
+            <div style="font-size: 5rem; margin-bottom: 1rem;"><i class="bi bi-globe"></i></div>
+            <p style="color: var(--text-secondary);">React • Node.js • PHP • Python</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Software Development -->
+      <div id="software" class="grid-2" style="margin-bottom: 4rem; align-items: center; direction: rtl;">
+        <div class="fade-in" style="direction: ltr;">
+          <span class="section-label"><i class="bi bi-laptop"></i> Software Development</span>
+          <h2 style="margin-bottom: 1.5rem;">Custom Software <span class="text-gradient">Solutions</span></h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.05rem;">
+            We build robust, scalable software applications that streamline your operations and give you a competitive edge.
+          </p>
+          <div class="grid-2">
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-database"></i></div>
+              <h4>Database Systems</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Efficient data management with PostgreSQL & MySQL.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-plug"></i></div>
+              <h4>API Development</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">RESTful APIs that connect your systems seamlessly.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-robot"></i></div>
+              <h4>Automation Tools</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Automate workflows and boost productivity.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-bar-chart"></i></div>
+              <h4>Business Apps</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Custom enterprise software for your operations.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card fade-in" style="direction: ltr; background: linear-gradient(135deg, rgba(92, 58, 255, 0.08), rgba(214, 223, 227, 0.04)); display: flex; align-items: center; justify-content: center; min-height: 300px;">
+          <div style="text-align: center;">
+            <div style="font-size: 5rem; margin-bottom: 1rem;"><i class="bi bi-laptop"></i></div>
+            <p style="color: var(--text-secondary);">Node.js • Express • Python • PHP</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cyber Security -->
+      <div id="security" class="grid-2" style="margin-bottom: 4rem; align-items: center;">
+        <div class="fade-in">
+          <span class="section-label"><i class="bi bi-lock"></i> Cyber Security</span>
+          <h2 style="margin-bottom: 1.5rem;">Security <span class="text-gradient">Services</span></h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.05rem;">
+            Protect your digital assets with our comprehensive cybersecurity services. We help you identify vulnerabilities and build robust security postures.
+          </p>
+          <div class="grid-2">
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-search"></i></div>
+              <h4>Security Audits</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Comprehensive security assessments.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-exclamation-triangle"></i></div>
+              <h4>Vulnerability Assessment</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Identify and fix security gaps.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-mortarboard"></i></div>
+              <h4>Awareness Programs</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Train your team on security best practices.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-clipboard-check"></i></div>
+              <h4>Security Consulting</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Expert guidance on security strategies.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card fade-in" style="background: linear-gradient(135deg, rgba(214, 223, 227, 0.06), rgba(99, 102, 241, 0.05)); display: flex; align-items: center; justify-content: center; min-height: 300px;">
+          <div style="text-align: center;">
+            <div style="font-size: 5rem; margin-bottom: 1rem;"><i class="bi bi-shield-lock"></i></div>
+            <p style="color: var(--text-secondary);">Audit • Assessment • Consulting • Training</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cloud -->
+      <div id="cloud" class="grid-2" style="margin-bottom: 4rem; align-items: center; direction: rtl;">
+        <div class="fade-in" style="direction: ltr;">
+          <span class="section-label"><i class="bi bi-cloud"></i> Cloud & Hosting</span>
+          <h2 style="margin-bottom: 1.5rem;">Cloud <span class="text-gradient">Solutions</span></h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.05rem;">
+            Reliable cloud infrastructure and deployment services. We ensure your applications run smoothly and securely in the cloud.
+          </p>
+          <div class="grid-2">
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-rocket"></i></div>
+              <h4>Website Deployment</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Fast, reliable deployment pipelines.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-display"></i></div>
+              <h4>Server Management</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">24/7 monitoring and maintenance.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-link-45deg"></i></div>
+              <h4>Cloud Integration</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Seamless integration with cloud platforms.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-graph-up-arrow"></i></div>
+              <h4>Scalability</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Solutions that grow with your business.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card fade-in" style="direction: ltr; background: linear-gradient(135deg, rgba(65, 27, 255, 0.08), rgba(99, 102, 241, 0.05)); display: flex; align-items: center; justify-content: center; min-height: 300px;">
+          <div style="text-align: center;">
+            <div style="font-size: 5rem; margin-bottom: 1rem;"><i class="bi bi-cloud"></i></div>
+            <p style="color: var(--text-secondary);">AWS • Cloud • Linux • Git</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consulting -->
+      <div class="grid-2" style="align-items: center;">
+        <div class="fade-in">
+          <span class="section-label"><i class="bi bi-bullseye"></i> Technical Consulting</span>
+          <h2 style="margin-bottom: 1.5rem;">Strategic <span class="text-gradient">Guidance</span></h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.05rem;">
+            Making the right technology decisions is crucial. Our expert consultants help you navigate the digital landscape with confidence.
+          </p>
+          <div class="grid-2">
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-bar-chart"></i></div>
+              <h4>Technology Strategy</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Align tech with business goals.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-arrow-clockwise"></i></div>
+              <h4>Digital Transformation</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Modernize your operations.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-rocket"></i></div>
+              <h4>Startup Guidance</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Technical roadmaps for startups.</p>
+            </div>
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-lightbulb"></i></div>
+              <h4>Architecture Design</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Scalable system architectures.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card fade-in" style="background: linear-gradient(135deg, rgba(244, 114, 182, 0.1), rgba(99, 102, 241, 0.05)); display: flex; align-items: center; justify-content: center; min-height: 300px;">
+          <div style="text-align: center;">
+            <div style="font-size: 5rem; margin-bottom: 1rem;"><i class="bi bi-bullseye"></i></div>
+            <p style="color: var(--text-secondary);">Strategy • Transformation • Innovation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="section" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Our Process</span>
+        <h2>How We <span class="text-gradient">Work</span></h2>
+      </div>
+      <div class="grid-4">
+        <div class="card fade-in" style="text-align: center;">
+          <div style="width: 50px; height: 50px; background: var(--gradient-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 1rem;">1</div>
+          <h4>Consultation</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Understand your needs and goals.</p>
+        </div>
+        <div class="card fade-in" style="text-align: center;">
+          <div style="width: 50px; height: 50px; background: var(--gradient-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 1rem;">2</div>
+          <h4>Planning</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Create a detailed roadmap.</p>
+        </div>
+        <div class="card fade-in" style="text-align: center;">
+          <div style="width: 50px; height: 50px; background: var(--gradient-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 1rem;">3</div>
+          <h4>Development</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Build with modern technologies.</p>
+        </div>
+        <div class="card fade-in" style="text-align: center;">
+          <div style="width: 50px; height: 50px; background: var(--gradient-1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 1rem;">4</div>
+          <h4>Delivery</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Launch and continuously support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="card fade-in" style="text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, rgba(65, 27, 255, 0.08), rgba(92, 58, 255, 0.05));">
+        <h2 style="margin-bottom: 1rem;">Ready to Build Something <span class="text-gradient">Amazing</span>?</h2>
+        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem;">
+          Let's discuss your project and find the perfect solution. We're here to help you succeed.
+        </p>
+        <div class="hero-buttons" style="justify-content: center;">
+          <a href="/contact" class="btn btn-primary">Start a Project</a>
+          <a href="/about" class="btn btn-secondary">Learn About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">
+            <img src="assets/images/light_logo.png" class="logo-img logo-light-theme" alt="Lixten Logo">
+            <img src="assets/images/dark_logo.png" class="logo-img logo-dark-theme" alt="Lixten Logo">
+          </a>
+          <p>Innovating Today, Empowering Tomorrow. Your trusted partner for digital transformation.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="/services#web">Web Development</a></li>
+            <li><a href="/services#software">Software Dev</a></li>
+            <li><a href="/services#security">Cyber Security</a></li>
+            <li><a href="/services#cloud">Cloud Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/about#vision">Vision</a></li>
+            <li><a href="/about#mission">Mission</a></li>
+            <li><a href="/about#values">Values</a></li>
+            <li><a href="assets/brochure.pdf" download><i class="bi bi-file-earmark-pdf" style="margin-right: 0.35rem;"></i> Brochure</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><i class="bi bi-geo-alt"></i> Chennai, Tamil Nadu, India</li>
+            <li><i class="bi bi-envelope"></i> <a href="mailto:lixtentechnologies@gmail.com">lixtentechnologies@gmail.com</a></li>
+            <li><i class="bi bi-globe"></i> <a href="http://www.lixten.in">www.lixten.in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lixten Technologies. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  
+</body>
+</html>
