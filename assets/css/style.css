@@ -782,6 +782,19 @@ h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* Compact navbar buttons on mobile */
+  .nav-container > .btn-primary {
+    padding: 6px 14px;
+    font-size: 0.78rem;
+    border-radius: 50px;
+  }
+
+  .nav-container > #themeToggle {
+    padding: 6px 9px !important;
+    font-size: 0.85rem;
+    margin-left: 0.25rem !important;
+  }
 }
 
 @media (max-width: 640px) {
